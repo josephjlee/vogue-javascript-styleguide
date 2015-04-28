@@ -730,12 +730,12 @@
     }
     ```
 
-  - Prefixing your comments with `@todo` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `@todo -- need to figure this out` or `@todo -- need to implement`. Note the leading `@`&mdash; this is a [JSDoc](http://usejsdoc.org/) comment.
+  - Prefixing your comments with `@TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `@TODO -- need to figure this out` or `@TODO -- need to implement`. Note the leading `@`&mdash; this is a [JSDoc](http://usejsdoc.org/) comment.
 
     ```javascript
     function Calculator() {
 
-      // @todo shouldn't use a global here
+      // @TODO shouldn't use a global here (pg)
       total = 0;
 
       return this;
@@ -743,7 +743,7 @@
 
     function Calculator() {
 
-      // @todo total should be configurable by an options param
+      // @TODO total should be configurable by an options param (eqw)
       this.total = 0;
 
       return this;
