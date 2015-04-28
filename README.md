@@ -276,7 +276,7 @@
     // immediately-invoked function expression (IIFE)
     (function() {
       console.log('Welcome to the Internet. Please follow me.');
-    })();
+    }());
     ```
 
   - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
@@ -834,28 +834,28 @@
     var x = y + 5;
     ```
 
-  - End files _without_ additional whitespace (that is, do not include a trailing newline).
+  - End files with a single newline character.
 
     ```javascript
     // good
     (function(global) {
       // ...stuff...
-    })(this);
+    }(this));↵
     ```
 
     ```javascript
     // bad
     (function(global) {
       // ...stuff...
-    })(this);↵
+    }(this));
+    ```
+
+    ```javascript
+    // bad
+    (function(global) {
+      // ...stuff...
+    }(this));↵
     ↵
-    ```
-
-    ```javascript
-    // bad
-    (function(global) {
-      // ...stuff...
-    })(this);↵
     ```
 
   - Use indentation when making long method chains. Use a leading dot, which
@@ -1015,19 +1015,19 @@
     (function() {
       var name = 'Skywalker'
       return name
-    })()
+    }())
 
     // good
     (function() {
       var name = 'Skywalker';
       return name;
-    })();
+    }());
 
     // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
     ;(function() {
       var name = 'Skywalker';
       return name;
-    })();
+    }());
     ```
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
@@ -1620,7 +1620,7 @@
 
 ## In the Wild
 
-  This is a list of organizations that are using this style guide. Send Airbnb a pull request or open an issue and they'll add you to the list.
+  This is a list of organizations that are using this style guide.
 
   - **Aan Zee**: [AanZee/javascript](https://github.com/AanZee/javascript)
   - **Adult Swim**: [adult-swim/javascript](https://github.com/adult-swim/javascript)
