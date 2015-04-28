@@ -1,9 +1,6 @@
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+# AutoPilot JavaScript Style Guide() {
 
-# Airbnb JavaScript Style Guide() {
-
-*A mostly reasonable approach to JavaScript*
-
+*A mostly reasonable approach to JavaScript&mdash;forked from the original by [Airbnb](https://github.com/Airbnb/javascript).*
 
 ## Table of Contents
 
@@ -35,7 +32,7 @@
   1. [In the Wild](#in-the-wild)
   1. [Translation](#translation)
   1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
-  1. [Chat With Us About Javascript](#chat-with-us-about-javascript)
+  1. [Chat With Airbnb About Javascript](#chat-with-airbnb-about-javascript)
   1. [Contributors](#contributors)
   1. [License](#license)
 
@@ -279,7 +276,7 @@
     // immediately-invoked function expression (IIFE)
     (function() {
       console.log('Welcome to the Internet. Please follow me.');
-    })();
+    }());
     ```
 
   - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
@@ -619,14 +616,14 @@
 
 ## Blocks
 
-  - Use braces with all multi-line blocks.
+  - Use braces with all blocks.
 
     ```javascript
     // bad
     if (test)
       return false;
 
-    // good
+    // bad
     if (test) return false;
 
     // good
@@ -733,26 +730,20 @@
     }
     ```
 
-  - Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
-
-  - Use `// FIXME:` to annotate problems.
+  - Prefixing your comments with `@TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `@TODO -- need to figure this out` or `@TODO -- need to implement`. Note the leading `@`&mdash; this is a [JSDoc](http://usejsdoc.org/) comment. Make sure you initial and date your comment; future developers (including future you) will thank you.
 
     ```javascript
     function Calculator() {
 
-      // FIXME: shouldn't use a global here
+      // @TODO shouldn't use a global here (pg 28 Apr 2015)
       total = 0;
 
       return this;
     }
-    ```
 
-  - Use `// TODO:` to annotate solutions to problems.
-
-    ```javascript
     function Calculator() {
 
-      // TODO: total should be configurable by an options param
+      // @TODO total should be configurable by an options param (eqw 28 Apr 2015)
       this.total = 0;
 
       return this;
@@ -846,25 +837,25 @@
   - End files with a single newline character.
 
     ```javascript
-    // bad
-    (function(global) {
-      // ...stuff...
-    })(this);
-    ```
-
-    ```javascript
-    // bad
-    (function(global) {
-      // ...stuff...
-    })(this);↵
-    ↵
-    ```
-
-    ```javascript
     // good
     (function(global) {
       // ...stuff...
-    })(this);↵
+    }(this));↵
+    ```
+
+    ```javascript
+    // bad
+    (function(global) {
+      // ...stuff...
+    }(this));
+    ```
+
+    ```javascript
+    // bad
+    (function(global) {
+      // ...stuff...
+    }(this));↵
+    ↵
     ```
 
   - Use indentation when making long method chains. Use a leading dot, which
@@ -944,6 +935,7 @@
     return obj;
     ```
 
+  - Trailing whitespace is an error. **Please set your editor or IDE to strip trailing whitespace on save**, or at least set it to make trailing whitespace visible so you can remove it yourself.
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1023,19 +1015,19 @@
     (function() {
       var name = 'Skywalker'
       return name
-    })()
+    }())
 
     // good
     (function() {
       var name = 'Skywalker';
       return name;
-    })();
+    }());
 
     // good (guards against the function becoming an argument when two files with IIFEs are concatenated)
     ;(function() {
       var name = 'Skywalker';
       return name;
-    })();
+    }());
     ```
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
@@ -1547,7 +1539,6 @@
   - [jQuery Find vs Context, Selector](http://jsperf.com/jquery-find-vs-context-sel/13)
   - [innerHTML vs textContent for script text](http://jsperf.com/innerhtml-vs-textcontent-for-script-text)
   - [Long String Concatenation](http://jsperf.com/ya-string-concat)
-  - Loading...
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1629,7 +1620,7 @@
 
 ## In the Wild
 
-  This is a list of organizations that are using this style guide. Send us a pull request or open an issue and we'll add you to the list.
+  This is a list of organizations that are using this style guide.
 
   - **Aan Zee**: [AanZee/javascript](https://github.com/AanZee/javascript)
   - **Adult Swim**: [adult-swim/javascript](https://github.com/adult-swim/javascript)
@@ -1703,9 +1694,9 @@
 
   - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
 
-## Chat With Us About JavaScript
+## Chat With Airbnb About JavaScript
 
-  - Find us on [gitter](https://gitter.im/airbnb/javascript).
+  - Find Airbnb on [gitter](https://gitter.im/airbnb/javascript).
 
 ## Contributors
 
