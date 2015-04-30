@@ -46,7 +46,6 @@
     "no-reserved-keys": 2,                                       // Disallow use of reserved words as object keys (can cause minification to blow up) (error).
     "no-self-compare": 1,                                        // Disallow comparison to oneself (usually a typo) (warning).
     "no-shadow-restricted-names": 2,                             // Disallow shadowing of restricted names like `arguments` (error).
-    "no-spaced-func": 2,                                         // Disallows space between `function` and identifier (e.g. disallows `function foo ()`) (error).
     "no-trailing-spaces": 2,                                     // Disallows trailing whitespace (error).
     "no-undef": 2,                                               // Disallow undeclared variables unless they've already been explicitly listed as global (error).
     "no-undef-init": 2,                                          // Disallow initializing a variable to `undefined` (error).
@@ -62,6 +61,7 @@
     "semi-spacing": [2, { "before": false, "after": true }],     // Enforces no spaces before semicolons and spacing after (http://eslint.org/docs/rules/semi-spacing) (error).
     "sort-vars": [1, { "ignoreCase": true }],                    // Requires var declarations be sorted alphabetically, case-insensitive (warning).
     "space-after-keywords": [2, "always"],                       // Requires spaces after `if`, `while`, &c (error).
+    "space-before-function-paren": [2, "always"],                // Requires a space between `function` and the following `()` (error).
     "space-in-parens": [2, "never"],                             // No spaces inside () (e.g. function(a, b)) (error).
     "space-infix-ops": 2,                                        // Requires space around infix operators (e.g. `1 + 2` instead of `1+2`) (error).
     "space-unary-ops": [2, { "words": true, "nonwords": false }] // Requires space "outside" unary ops and disallows it "inside" (http://eslint.org/docs/rules/space-unary-ops) (error).
