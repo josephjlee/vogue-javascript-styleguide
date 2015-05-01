@@ -52,7 +52,7 @@
     "no-unused-vars": 1,                                         // Disallow declaration of variables that are never used (warning).
     "no-use-before-define": 2,                                   // Disallow use of variables before they are defined (error).
     "no-with": 2,                                                // Disallow use of `with` (error).
-    "one-var": [2, "always"],                                    // Enforces one `var` per declaration (http://eslint.org/docs/rules/one-var) (error).
+    "one-var": [2, "never"],                                     // Enforces separate `var` for each declaration (http://eslint.org/docs/rules/one-var) (error).
     "operator-assignment": [2, "always"],                        // Enforces operator assignment where possible (e.g. `foo *= 2` instead of `foo = foo * 2`) (error).
     "quotes": [2, "single"],                                     // Always requires single quotes for strings (error).
     "radix": 2,                                                  // Requires use of radix parameter in `parseInt()` (error).
