@@ -41,7 +41,6 @@
     "no-implied-eval": 2,                                        // Disallow functions that call `eval()` (error).
     "no-invalid-regexp": 2,                                      // Disallow invalid regular expressions (error).
     "no-mixed-spaces-and-tabs": 2,                               // Disallow mixed spaces and tabs (error).
-    "no-multiple-empty-lines": 1,                                // Disallow multiple empty lines (warning).
     "no-redeclare": 2,                                           // Disallow redeclaration of variables (error).
     "no-reserved-keys": 2,                                       // Disallow use of reserved words as object keys (can cause minification to blow up) (error).
     "no-self-compare": 1,                                        // Disallow comparison to oneself (usually a typo) (warning).
