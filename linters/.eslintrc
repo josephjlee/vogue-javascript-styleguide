@@ -13,61 +13,63 @@
 
   // Style and correctness rules to enforce.
   "rules": {
-    "brace-style": 2,                                            // Enforce the One True Brace style (http://eslint.org/docs/rules/brace-style) (error).
-    "camelcase": 2,                                              // Requires camelCase for variable names (error).
-    "comma-dangle": [2, "never"],                                // No dangling commas (error).
-    "comma-spacing": [2, { "before": false, "after": true }],    // Enforce comma spacing (e.g. { foo: 1, bar: 2 }) (error).
-    "comma-style": [2, "last"],                                  // Disallows leading comma (error).
-    "complexity": [1, 4],                                        // Cyclomatic complexity cannot exceed 4 (warning).
-    "consistent-this": [2, "_this"],                             // Requires that aliases to `this` be named `_this` (and not, e.g., `that` or `self) (error).
-    "curly": 2,                                                  // Curly braces required for all blocks (error).
-    "default-case": 2,                                           // All case statements must have a `default` (error).
-    "dot-notation": 2,                                           // Dot notation (`object.foo`) should be used wherever possible (error).
-    "eol-last": 2,                                               // Requires one newline at EOF (to make GitHub happy) (error).
-    "eqeqeq": 2,                                                 // Strict (`===`) equality unless checking for `null` and `undefined` (error).
-    "guard-for-in": 1,                                           // Requires an `if` statement within a `for...in` (warning).
-    "indent": [2, 2],                                            // Two spaces per indentation level (error).
-    "key-spacing": [2, { "beforeColon: false,
-                         "afterColon: true }],                   // Enforces key spacing (e.g. { foo: 1, bar: 2 }) (error).
-    "new-cap": 2,                                                // Requires variables following `new` to be capitalized (error).
-    "new-parens": 2,                                             // Disallows omitting parentheses when invoking constructors with no arguments (error).
-    "no-caller": 2,                                              // Disallows use of `arguments.caller` and `arguments.callee` (error).
-    "no-debugger": 1,                                            // Disallows use of `debugger;` (warning).
-    "no-dupe-args": 2,                                           // Disallows duplicate argument names (error).
-    "no-dupe-keys": 2,                                           // Disallows duplicate object keys (error).
-    "no-duplicate-case": 2,                                      // Disallows duplicate case labels (error).
-    "no-eq-null": 0,                                             // Explicitly permits `==` to check for `undefined || null`.
-    "no-eval": 2,                                                // Disallows use of `eval()` (error).
-    "no-implied-eval": 2,                                        // Disallow functions that call `eval()` (error).
-    "no-invalid-regexp": 2,                                      // Disallow invalid regular expressions (error).
-    "no-mixed-spaces-and-tabs": 2,                               // Disallow mixed spaces and tabs (error).
-    "no-redeclare": 2,                                           // Disallow redeclaration of variables (error).
-    "no-reserved-keys": 2,                                       // Disallow use of reserved words as object keys (can cause minification to blow up) (error).
-    "no-self-compare": 1,                                        // Disallow comparison to oneself (usually a typo) (warning).
-    "no-shadow-restricted-names": 2,                             // Disallow shadowing of restricted names like `arguments` (error).
-    "no-trailing-spaces": 2,                                     // Disallows trailing whitespace (error).
-    "no-undef": 2,                                               // Disallow undeclared variables unless they've already been explicitly listed as global (error).
-    "no-undef-init": 2,                                          // Disallow initializing a variable to `undefined` (error).
-    "no-unreachable": 2,                                         // Disallow unreachable code (error).
-    "no-unused-vars": 1,                                         // Disallow declaration of variables that are never used (warning).
-    "no-use-before-define": 2,                                   // Disallow use of variables before they are defined (error).
-    "no-with": 2,                                                // Disallow use of `with` (error).
-    "one-var": [2, "never"],                                     // Enforces separate `var` for each declaration (http://eslint.org/docs/rules/one-var) (error).
-    "operator-assignment": [2, "always"],                        // Enforces operator assignment where possible (e.g. `foo *= 2` instead of `foo = foo * 2`) (error).
-    "quotes": [2, "single"],                                     // Always requires single quotes for strings (error).
-    "radix": 2,                                                  // Requires use of radix parameter in `parseInt()` (error).
-    "semi": [2, "always"],                                       // Always requires semicolons (instead of depending on ASI) (error).
-    "semi-spacing": [2, { "before": false, "after": true }],     // Enforces no spaces before semicolons and spacing after (http://eslint.org/docs/rules/semi-spacing) (error).
-    "sort-vars": [1, { "ignoreCase": true }],                    // Requires var declarations be sorted alphabetically, case-insensitive (warning).
-    "space-after-keywords": [2, "always"],                       // Requires spaces after `if`, `while`, &c (error).
-    "space-before-function-paren": [2, "always"],                // Requires a space between `function` and the following `()` (error).
-    "space-in-parens": [2, "never"],                             // No spaces inside () (e.g. function(a, b)) (error).
-    "space-infix-ops": 2,                                        // Requires space around infix operators (e.g. `1 + 2` instead of `1+2`) (error).
-    "space-unary-ops": [2, { "words": true, "nonwords": false }] // Requires space "outside" unary ops and disallows it "inside" (http://eslint.org/docs/rules/space-unary-ops) (error).
-    "strict": [2, "global"],                                     // Requires global strict mode (error).
-    "use-isnan": 2,                                              // Requires `isNaN()` instead of comparison to `NaN` (error).
-    "valid-jsdoc": 1,                                            // Requires valid JSDoc comments (warning).
-    "yoda", [2, "never"]                                         // Disallow Yoda conditionals (http://en.wikipedia.org/wiki/Yoda_conditions) (error).
+    "brace-style": 2,                                             // Enforce the One True Brace style (http://eslint.org/docs/rules/brace-style) (error).
+    "camelcase": 2,                                               // Requires camelCase for variable names (error).
+    "comma-dangle": [2, "never"],                                 // No dangling commas (error).
+    "comma-spacing": [2, { "before": false, "after": true }],     // Enforce comma spacing (e.g. { foo: 1, bar: 2 }) (error).
+    "comma-style": [2, "last"],                                   // Disallows leading comma (error).
+    "complexity": [1, 4],                                         // Cyclomatic complexity cannot exceed 4 (warning).
+    "consistent-this": [2, "_this"],                              // Requires that aliases to `this` be named `_this` (and not, e.g., `that` or `self) (error).
+    "curly": 2,                                                   // Curly braces required for all blocks (error).
+    "default-case": 2,                                            // All case statements must have a `default` (error).
+    "dot-notation": 2,                                            // Dot notation (`object.foo`) should be used wherever possible (error).
+    "eol-last": 2,                                                // Requires one newline at EOF (to make GitHub happy) (error).
+    "eqeqeq": 2,                                                  // Strict (`===`) equality unless checking for `null` and `undefined` (error).
+    "guard-for-in": 1,                                            // Requires an `if` statement within a `for...in` (warning).
+    "indent": [2, 2],                                             // Two spaces per indentation level (error).
+    "key-spacing": [2, { "beforeColon": false,
+                         "afterColon": true }],                   // Enforces key spacing (e.g. { foo: 1, bar: 2 }) (error).
+    "new-cap": 2,                                                 // Requires variables following `new` to be capitalized (error).
+    "new-parens": 2,                                              // Disallows omitting parentheses when invoking constructors with no arguments (error).
+    "no-caller": 2,                                               // Disallows use of `arguments.caller` and `arguments.callee` (error).
+    "no-debugger": 1,                                             // Disallows use of `debugger;` (warning).
+    "no-dupe-args": 2,                                            // Disallows duplicate argument names (error).
+    "no-dupe-keys": 2,                                            // Disallows duplicate object keys (error).
+    "no-duplicate-case": 2,                                       // Disallows duplicate case labels (error).
+    "no-eq-null": 0,                                              // Explicitly permits `==` to check for `undefined || null`.
+    "no-eval": 2,                                                 // Disallows use of `eval()` (error).
+    "no-implied-eval": 2,                                         // Disallow functions that call `eval()` (error).
+    "no-invalid-regexp": 2,                                       // Disallow invalid regular expressions (error).
+    "no-mixed-spaces-and-tabs": 2,                                // Disallow mixed spaces and tabs (error).
+    "no-redeclare": 2,                                            // Disallow redeclaration of variables (error).
+    "no-reserved-keys": 2,                                        // Disallow use of reserved words as object keys (can cause minification to blow up) (error).
+    "no-self-compare": 1,                                         // Disallow comparison to oneself (usually a typo) (warning).
+    "no-shadow-restricted-names": 2,                              // Disallow shadowing of restricted names like `arguments` (error).
+    "no-trailing-spaces": 2,                                      // Disallows trailing whitespace (error).
+    "no-undef": 2,                                                // Disallow undeclared variables unless they've already been explicitly listed as global (error).
+    "no-undef-init": 2,                                           // Disallow initializing a variable to `undefined` (error).
+    "no-underscore-dangle": 0,
+    "no-unreachable": 2,                                          // Disallow unreachable code (error).
+    "no-unused-vars": 1,                                          // Disallow declaration of variables that are never used (warning).
+    "no-use-before-define": 2,                                    // Disallow use of variables before they are defined (error).
+    "no-with": 2,                                                 // Disallow use of `with` (error).
+    "one-var": [2, "never"],                                      // Enforces separate `var` for each declaration (http://eslint.org/docs/rules/one-var) (error).
+    "operator-assignment": [2, "always"],                         // Enforces operator assignment where possible (e.g. `foo *= 2` instead of `foo = foo * 2`) (error).
+    "quotes": [2, "single"],                                      // Always requires single quotes for strings (error).
+    "radix": 2,                                                   // Requires use of radix parameter in `parseInt()` (error).
+    "semi": [2, "always"],                                        // Always requires semicolons (instead of depending on ASI) (error).
+    "semi-spacing": [2, { "before": false, "after": true }],      // Enforces no spaces before semicolons and spacing after (http://eslint.org/docs/rules/semi-spacing) (error).
+    "sort-vars": [1, { "ignoreCase": true }],                     // Requires var declarations be sorted alphabetically, case-insensitive (warning).
+    "space-after-keywords": [2, "always"],                        // Requires spaces after `if`, `while`, &c (error).
+    "space-before-function-paren": [2, { "anonymous": "always",
+                                         "named": "never" }],     // Requires a space between `function` and the following `()` (error).
+    "space-in-parens": [2, "never"],                              // No spaces inside () (e.g. function (a, b)) (error).
+    "space-infix-ops": 2,                                         // Requires space around infix operators (e.g. `1 + 2` instead of `1+2`) (error).
+    "space-unary-ops": [2, { "words": true, "nonwords": false }], // Requires space "outside" unary ops and disallows it "inside" (http://eslint.org/docs/rules/space-unary-ops) (error).
+    "strict": [2, "global"],                                      // Requires global strict mode (error).
+    "use-isnan": 2,                                               // Requires `isNaN()` instead of comparison to `NaN` (error).
+    "valid-jsdoc": 1,                                             // Requires valid JSDoc comments (warning).
+    "yoda": [2, "never", { "exceptRange": false }]                // Disallow Yoda conditionals (http://en.wikipedia.org/wiki/Yoda_conditions) (error).
   },
 
   // Plugins to include.
