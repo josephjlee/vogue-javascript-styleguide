@@ -1452,7 +1452,7 @@
 ## React
 Our React style is mostly influenced by [David Chang's style guide](https://reactjsnews.com/react-style-guide-patterns-i-like/). Exceptions are enumerated below.
 
-  - Since `displayName` is automatically set by React when calling `React.createClass()`, there's no need to explicitly include one:
+  - Since `displayName` is automatically set by React after calling `React.createClass()` and transpiling from JSX to JavaScript, there's no need to explicitly include one:
 
   ```javascript
     // Preferred
@@ -1483,10 +1483,9 @@ Our React style is mostly influenced by [David Chang's style guide](https://reac
     renderContent: function () {
       var content =
         <div>
-          {this.props.rubric && <a className='rubric' href={this.props.rubricUrl} dangerouslySetInnerHTML={{__html: this.props.rubric}} />}
-          {this.props.hed && <div className='hed' dangerouslySetInnerHTML={{__html: this.props.hed}} />}
-          {this.props.dek && <div className='dek' dangerouslySetInnerHTML={{__html: this.props.dek}} />}
-          {this.props.date && <div className='date'>{this.props.date}</div>}
+          {this.props.foo && <div className='foo' dangerouslySetInnerHTML={{__html: this.props.foo}} />}
+          {this.props.isTruthy && <MyComponent />}
+          {this.props.isTruthy && this.renderMyComponent()}
         </div>;
 
       return this.buildContent(content);
