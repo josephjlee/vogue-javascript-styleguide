@@ -24,6 +24,7 @@
   1. [Constructors](#constructors)
   1. [Events](#events)
   1. [Modules](#modules)
+  1. [React](#react)
   1. [jQuery](#jquery)
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [Testing](#testing)
@@ -1447,6 +1448,51 @@
 
 **[⬆ back to top](#table-of-contents)**
 
+
+## React
+Our React style is mostly influenced by [David Chang's style guide](https://reactjsnews.com/react-style-guide-patterns-i-like/). Exceptions are enumerated below.
+
+  - Since `displayName` is automatically set by React after calling `React.createClass()` and transpiling from JSX to JavaScript, there's no need to explicitly include one:
+
+  ```javascript
+    // Preferred
+    React.createClass({
+      propTypes: {},
+      mixins: [],
+      getInitialState: function () {},
+      componentWillMount: function () {},
+      componentWillUnmount: function () {},
+      render: function() {}
+    });
+
+    // Not preferred
+    React.createClass({
+      displayName: '',
+      propTypes: {},
+      mixins: [],
+      getInitialState: function () {},
+      componentWillMount: function () {},
+      componentWillUnmount: function () {},
+      render: function () {}
+    });
+  ```
+
+  - When it comes to conditionals, we tend to prefer `&&` to ternaries and will often use `&&` rather than breaking logic out into separate methods:
+
+  ```javascript
+    renderContent: function () {
+      var content =
+        <div>
+          {this.props.foo && <div className='foo' dangerouslySetInnerHTML={{__html: this.props.foo}} />}
+          {this.props.isTruthy && <MyComponent />}
+          {this.props.isTruthy && this.renderMyComponent()}
+        </div>;
+
+      return this.buildContent(content);
+    },
+  ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## jQuery
 
