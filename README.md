@@ -1,6 +1,6 @@
-# AutoPilot JavaScript Style Guide() {
+# Conde Nast JavaScript Style Guide() {
 
-*A mostly reasonable approach to JavaScript&mdash;forked from the original by [Airbnb](https://github.com/Airbnb/javascript).*
+*A mostly reasonable approach to JavaScript&mdash;forked from Conde Nast, originally written by [Airbnb](https://github.com/Airbnb/javascript).*
 
 ## Table of Contents
 
