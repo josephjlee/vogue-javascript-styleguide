@@ -2,7 +2,8 @@
   // ECMAScript 6 features to enable.
   "ecmaFeatures": {
     "jsx": true,
-    "modules": true
+    "modules": true,
+    "experimentalObjectRestSpread": true,
   },
 
   // Global variables to recognize.
