@@ -1,14 +1,16 @@
 {
   // ECMAScript 6 features to enable.
   "ecmaFeatures": {
-    "jsx": true
+    "jsx": true,
+    "modules": true
   },
 
   // Global variables to recognize.
   "env": {
     "browser": true,
     "jasmine": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
 
   // Style and correctness rules to enforce.
@@ -57,6 +59,8 @@
     "operator-assignment": [2, "always"],                         // Enforces operator assignment where possible (e.g. `foo *= 2` instead of `foo = foo * 2`) (error).
     "quotes": [2, "single"],                                      // Always requires single quotes for strings (error).
     "radix": 2,                                                   // Requires use of radix parameter in `parseInt()` (error).
+    "react/jsx-uses-react": 1,                                    // Prevent React to be incorrectly marked as unused
+    "react/react-in-jsx-scope": 2,                                // Prevent missing React when using JSX
     "semi": [2, "always"],                                        // Always requires semicolons (instead of depending on ASI) (error).
     "semi-spacing": [2, { "before": false, "after": true }],      // Enforces no spaces before semicolons and spacing after (http://eslint.org/docs/rules/semi-spacing) (error).
     "sort-vars": [1, { "ignoreCase": true }],                     // Requires var declarations be sorted alphabetically, case-insensitive (warning).
